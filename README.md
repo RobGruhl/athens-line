@@ -24,6 +24,7 @@ Stop order follows the arrows on the operator's route map. Their site doesn't pu
 python3 scripts/narrate.py --set rob          # plan: clips, characters, credits left
 python3 scripts/narrate.py --set rob --yes    # render missing clips into docs/audio/rob/
 python3 scripts/narrate.py --set jamie --yes
+python3 scripts/audit_audio.py                # local transcription check for v4 loops (re-render what it flags)
 python3 scripts/build.py                      # docs/index.html (?as=jamie opens Jamie's track)
 python3 scripts/album.py                      # album/<set>/ tagged for Apple Music (gitignored)
 ```

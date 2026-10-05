@@ -143,6 +143,7 @@ def main():
     ap.add_argument("--stops", help="e.g. 1-3,6")
     ap.add_argument("--voice", help="voice name on the account")
     ap.add_argument("--force", action="store_true", help="re-render clips that already exist")
+    ap.add_argument("--stability", type=float, help="override the set's stability (higher = fewer v4 loops)")
     a = ap.parse_args()
 
     out = AUDIO / a.set
@@ -177,7 +178,8 @@ def main():
         return
     out.mkdir(parents=True, exist_ok=True)
     for s, length, text, fn in jobs:
-        body = json.dumps({"model_id": MODEL, "text": text, "voice_settings": SETTINGS[a.set]}).encode()
+        vs = dict(SETTINGS[a.set], **({"stability": a.stability} if a.stability else {}))
+        body = json.dumps({"model_id": MODEL, "text": text, "voice_settings": vs}).encode()
         t0 = time.time()
         audio, hdrs = req(key, f"/v1/text-to-speech/{voice['voice_id']}?output_format=mp3_44100_128", body,
                           {"Content-Type": "application/json", "Accept": "audio/mpeg"})
