@@ -70,7 +70,12 @@ details p { margin:.7rem 0; }
       for (var i = 0; i < srcs.length; i++) {
         var url = new URL(srcs[i], location.href).href;
         try {
-          if (!(await cache.match(url))) { var r = await fetch(url, {cache: 'reload'}); if (!r.ok) throw 0; await cache.put(url, r); }
+          if (!(await cache.match(url))) {
+            var r = await fetch(url, {cache: 'reload'}); if (!r.ok) throw 0; await cache.put(url, r);
+            // drop older versions of the same clip (re-rendered audio has a new ?v=)
+            var path = new URL(url).pathname, keys = await cache.keys();
+            for (var k = 0; k < keys.length; k++) if (new URL(keys[k].url).pathname === path && keys[k].url !== url) await cache.delete(keys[k]);
+          }
           done++;
         } catch (e) { failed++; }
         info.textContent = 'Saving ' + who + "'s clips: " + done + ' of ' + srcs.length + (failed ? ' (' + failed + ' failed)' : '');

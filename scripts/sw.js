@@ -36,7 +36,8 @@ async function ranged(req, res) {
 }
 
 async function audio(req) {
-  const hit = await caches.match(req.url, {cacheName: AUDIO, ignoreSearch: true});
+  // exact match, query included: ?v= is the clip's content hash, so a re-rendered clip never plays stale
+  const hit = await caches.match(req.url, {cacheName: AUDIO});
   return hit ? ranged(req, hit) : fetch(req);
 }
 

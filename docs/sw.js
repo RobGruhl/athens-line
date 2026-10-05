@@ -1,7 +1,7 @@
 // Athens Line service worker: keeps the page and saved audio on the phone.
 // The page lives in a versioned cache (build.py stamps VERSION); audio lives in its own
 // unversioned cache so a page update never throws away downloaded clips.
-const VERSION = '6111dae524';
+const VERSION = '0a2a43f467';
 const SHELL = 'athens-shell-' + VERSION;
 const AUDIO = 'athens-audio';
 const SHELL_FILES = ['./', 'index.html', 'manifest.webmanifest', 'icon-180.png', 'icon-512.png'];
@@ -36,7 +36,8 @@ async function ranged(req, res) {
 }
 
 async function audio(req) {
-  const hit = await caches.match(req.url, {cacheName: AUDIO, ignoreSearch: true});
+  // exact match, query included: ?v= is the clip's content hash, so a re-rendered clip never plays stale
+  const hit = await caches.match(req.url, {cacheName: AUDIO});
   return hit ? ranged(req, hit) : fetch(req);
 }
 

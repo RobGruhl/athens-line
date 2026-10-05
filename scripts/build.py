@@ -33,8 +33,10 @@ def stop_html(s):
         a = s["audio"].get(length)
         if a:
             mins = f"{int(a['sec'] // 60)}:{int(a['sec'] % 60):02d}" if a.get("sec") else ""
+            # content hash in the URL: a re-rendered clip gets a new address, so stale offline copies never play
+            v = hashlib.sha1((DOCS / a["file"]).read_bytes()).hexdigest()[:8]
             players += (f'<div class="clip"><span>{length.title()} <small>{mins}</small></span>'
-                        f'<audio controls preload="none" src="{a["file"]}"></audio></div>')
+                        f'<audio controls preload="none" src="{a["file"]}?v={v}"></audio></div>')
     where = f'<p class="where">{html.escape(s["where"])}</p>' if s.get("where") else ""
     return (f'<section class="stop" id="{s["slug"]}"><h2><span class="n">{s["n"]}</span>{html.escape(s["title"])}</h2>'
             f'{where}{players}<details><summary>Read the long version</summary>{paras(s["long"])}</details>'
