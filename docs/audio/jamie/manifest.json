@@ -1,0 +1,199 @@
+{
+ "set": "jamie",
+ "model": "eleven_v4",
+ "voice": "George - Warm, Captivating Storyteller",
+ "clips": {
+  "syntagma": {
+   "n": 1,
+   "title": "The City's Front Room",
+   "short": {
+    "file": "audio/jamie/01-syntagma-short.mp3",
+    "sec": 31.2
+   },
+   "long": {
+    "file": "audio/jamie/01-syntagma-long.mp3",
+    "sec": 139.3
+   }
+  },
+  "makrygianni": {
+   "n": 2,
+   "title": "Islanders Under the Rock",
+   "short": {
+    "file": "audio/jamie/02-makrygianni-short.mp3",
+    "sec": 30.1
+   },
+   "long": {
+    "file": "audio/jamie/02-makrygianni-long.mp3",
+    "sec": 133.4
+   }
+  },
+  "acropolis-museum": {
+   "n": 3,
+   "title": "The Maidens and the Empty Spaces",
+   "short": {
+    "file": "audio/jamie/03-acropolis-museum-short.mp3",
+    "sec": 33.1
+   },
+   "long": {
+    "file": "audio/jamie/03-acropolis-museum-long.mp3",
+    "sec": 146.4
+   }
+  },
+  "acropolis-philopappou": {
+   "n": 4,
+   "title": "A Robe for Athena",
+   "short": {
+    "file": "audio/jamie/04-acropolis-philopappou-short.mp3",
+    "sec": 30.6
+   },
+   "long": {
+    "file": "audio/jamie/04-acropolis-philopappou-long.mp3",
+    "sec": 152.1
+   }
+  },
+  "olympian-zeus": {
+   "n": 5,
+   "title": "A Basket on a Rope",
+   "short": {
+    "file": "audio/jamie/05-olympian-zeus-short.mp3",
+    "sec": 31.0
+   },
+   "long": {
+    "file": "audio/jamie/05-olympian-zeus-long.mp3",
+    "sec": 131.2
+   }
+  },
+  "national-gardens": {
+   "n": 6,
+   "title": "The Queen's Garden",
+   "short": {
+    "file": "audio/jamie/06-national-gardens-short.mp3",
+    "sec": 32.0
+   },
+   "long": {
+    "file": "audio/jamie/06-national-gardens-long.mp3",
+    "sec": 139.9
+   }
+  },
+  "museum-mile": {
+   "n": 7,
+   "title": "Embroidery and Coffee",
+   "short": {
+    "file": "audio/jamie/07-museum-mile-short.mp3",
+    "sec": 29.9
+   },
+   "long": {
+    "file": "audio/jamie/07-museum-mile-long.mp3",
+    "sec": 141.6
+   }
+  },
+  "national-gallery": {
+   "n": 8,
+   "title": "Pictures of Home",
+   "short": {
+    "file": "audio/jamie/08-national-gallery-short.mp3",
+    "sec": 32.9
+   },
+   "long": {
+    "file": "audio/jamie/08-national-gallery-long.mp3",
+    "sec": 132.2
+   }
+  },
+  "panathenaic-stadium": {
+   "n": 9,
+   "title": "The Water Carrier and the Woman Who Ran",
+   "short": {
+    "file": "audio/jamie/09-panathenaic-stadium-short.mp3",
+    "sec": 29.8
+   },
+   "long": {
+    "file": "audio/jamie/09-panathenaic-stadium-long.mp3",
+    "sec": 135.9
+   }
+  },
+  "trilogy": {
+   "n": 10,
+   "title": "The Right to Read",
+   "short": {
+    "file": "audio/jamie/10-trilogy-short.mp3",
+    "sec": 30.1
+   },
+   "long": {
+    "file": "audio/jamie/10-trilogy-long.mp3",
+    "sec": 139.5
+   }
+  },
+  "archaeological-museum": {
+   "n": 11,
+   "title": "Small Lives, Long Ago",
+   "short": {
+    "file": "audio/jamie/11-archaeological-museum-short.mp3",
+    "sec": 32.0
+   },
+   "long": {
+    "file": "audio/jamie/11-archaeological-museum-long.mp3",
+    "sec": 128.9
+   }
+  },
+  "omonia": {
+   "n": 12,
+   "title": "Kiosks and Newcomers",
+   "short": {
+    "file": "audio/jamie/12-omonia-short.mp3",
+    "sec": 32.1
+   },
+   "long": {
+    "file": "audio/jamie/12-omonia-long.mp3",
+    "sec": 154.1
+   }
+  },
+  "karaiskaki": {
+   "n": 13,
+   "title": "Silk and Clay",
+   "short": {
+    "file": "audio/jamie/13-karaiskaki-short.mp3",
+    "sec": 29.6
+   },
+   "long": {
+    "file": "audio/jamie/13-karaiskaki-long.mp3",
+    "sec": 147.0
+   }
+  },
+  "monastiraki-thissio": {
+   "n": 14,
+   "title": "Cobblers, Gardens and the Evening Stroll",
+   "short": {
+    "file": "audio/jamie/14-monastiraki-thissio-short.mp3",
+    "sec": 29.1
+   },
+   "long": {
+    "file": "audio/jamie/14-monastiraki-thissio-long.mp3",
+    "sec": 151.6
+   }
+  },
+  "central-market": {
+   "n": 15,
+   "title": "The City's Kitchen",
+   "short": {
+    "file": "audio/jamie/15-central-market-short.mp3",
+    "sec": 30.4
+   },
+   "long": {
+    "file": "audio/jamie/15-central-market-long.mp3",
+    "sec": 136.9
+   }
+  },
+  "eat": {
+   "n": 16,
+   "title": "Where Athens Eats",
+   "short": {
+    "file": "audio/jamie/16-eat-short.mp3",
+    "sec": 35.6
+   },
+   "long": {
+    "file": "audio/jamie/16-eat-long.mp3",
+    "sec": 163.4
+   }
+  }
+ }
+}

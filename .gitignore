@@ -1,0 +1,7 @@
+album/
+.DS_Store
+*.env
+.env
+research/*.jpg
+research/pron/
+__pycache__/

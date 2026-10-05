@@ -1,0 +1,199 @@
+{
+ "set": "rob",
+ "model": "eleven_v4",
+ "voice": "George - Warm, Captivating Storyteller",
+ "clips": {
+  "syntagma": {
+   "n": 1,
+   "title": "A King at the Window",
+   "short": {
+    "file": "audio/rob/01-syntagma-short.mp3",
+    "sec": 33.0
+   },
+   "long": {
+    "file": "audio/rob/01-syntagma-long.mp3",
+    "sec": 163.1
+   }
+  },
+  "makrygianni": {
+   "n": 2,
+   "title": "The General Who Learned to Write",
+   "short": {
+    "file": "audio/rob/02-makrygianni-short.mp3",
+    "sec": 31.5
+   },
+   "long": {
+    "file": "audio/rob/02-makrygianni-long.mp3",
+    "sec": 140.8
+   }
+  },
+  "acropolis-museum": {
+   "n": 3,
+   "title": "Room for the Missing",
+   "short": {
+    "file": "audio/rob/03-acropolis-museum-short.mp3",
+    "sec": 42.8
+   },
+   "long": {
+    "file": "audio/rob/03-acropolis-museum-long.mp3",
+    "sec": 134.7
+   }
+  },
+  "acropolis-philopappou": {
+   "n": 4,
+   "title": "No Straight Lines",
+   "short": {
+    "file": "audio/rob/04-acropolis-philopappou-short.mp3",
+    "sec": 31.5
+   },
+   "long": {
+    "file": "audio/rob/04-acropolis-philopappou-long.mp3",
+    "sec": 152.7
+   }
+  },
+  "olympian-zeus": {
+   "n": 5,
+   "title": "The Emperor's Boast",
+   "short": {
+    "file": "audio/rob/05-olympian-zeus-short.mp3",
+    "sec": 31.6
+   },
+   "long": {
+    "file": "audio/rob/05-olympian-zeus-long.mp3",
+    "sec": 131.7
+   }
+  },
+  "national-gardens": {
+   "n": 6,
+   "title": "The Queen's Garden",
+   "short": {
+    "file": "audio/rob/06-national-gardens-short.mp3",
+    "sec": 37.4
+   },
+   "long": {
+    "file": "audio/rob/06-national-gardens-long.mp3",
+    "sec": 161.2
+   }
+  },
+  "museum-mile": {
+   "n": 7,
+   "title": "The Duchess and the Museums",
+   "short": {
+    "file": "audio/rob/07-museum-mile-short.mp3",
+    "sec": 36.0
+   },
+   "long": {
+    "file": "audio/rob/07-museum-mile-long.mp3",
+    "sec": 141.3
+   }
+  },
+  "hilton-national-gallery": {
+   "n": 8,
+   "title": "The Hotel and the Heist",
+   "short": {
+    "file": "audio/rob/08-hilton-national-gallery-short.mp3",
+    "sec": 32.6
+   },
+   "long": {
+    "file": "audio/rob/08-hilton-national-gallery-long.mp3",
+    "sec": 178.2
+   }
+  },
+  "panathenaic-stadium": {
+   "n": 9,
+   "title": "The Water Carrier's Race",
+   "short": {
+    "file": "audio/rob/09-panathenaic-stadium-short.mp3",
+    "sec": 31.5
+   },
+   "long": {
+    "file": "audio/rob/09-panathenaic-stadium-long.mp3",
+    "sec": 147.4
+   }
+  },
+  "trilogy": {
+   "n": 10,
+   "title": "A Classical Capital",
+   "short": {
+    "file": "audio/rob/10-trilogy-short.mp3",
+    "sec": 32.4
+   },
+   "long": {
+    "file": "audio/rob/10-trilogy-long.mp3",
+    "sec": 178.4
+   }
+  },
+  "archaeological-museum": {
+   "n": 11,
+   "title": "The Machine from the Sea",
+   "short": {
+    "file": "audio/rob/11-archaeological-museum-short.mp3",
+    "sec": 31.4
+   },
+   "long": {
+    "file": "audio/rob/11-archaeological-museum-long.mp3",
+    "sec": 150.7
+   }
+  },
+  "omonia": {
+   "n": 12,
+   "title": "The Square of Concord",
+   "short": {
+    "file": "audio/rob/12-omonia-short.mp3",
+    "sec": 32.3
+   },
+   "long": {
+    "file": "audio/rob/12-omonia-long.mp3",
+    "sec": 164.6
+   }
+  },
+  "karaiskaki": {
+   "n": 13,
+   "title": "The Nun's Son",
+   "short": {
+    "file": "audio/rob/13-karaiskaki-short.mp3",
+    "sec": 30.6
+   },
+   "long": {
+    "file": "audio/rob/13-karaiskaki-long.mp3",
+    "sec": 135.5
+   }
+  },
+  "thissio-monastiraki": {
+   "n": 14,
+   "title": "Government by Lottery",
+   "short": {
+    "file": "audio/rob/14-thissio-monastiraki-short.mp3",
+    "sec": 34.4
+   },
+   "long": {
+    "file": "audio/rob/14-thissio-monastiraki-long.mp3",
+    "sec": 167.7
+   }
+  },
+  "central-market": {
+   "n": 15,
+   "title": "The Stomach of Athens",
+   "short": {
+    "file": "audio/rob/15-central-market-short.mp3",
+    "sec": 33.4
+   },
+   "long": {
+    "file": "audio/rob/15-central-market-long.mp3",
+    "sec": 145.2
+   }
+  },
+  "eat": {
+   "n": 16,
+   "title": "Where Athens Eats",
+   "short": {
+    "file": "audio/rob/16-eat-short.mp3",
+    "sec": 35.2
+   },
+   "long": {
+    "file": "audio/rob/16-eat-long.mp3",
+    "sec": 161.6
+   }
+  }
+ }
+}
