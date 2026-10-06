@@ -14,6 +14,9 @@
   :root:not([data-theme="light"]) { --bg:#12171C; --ink:#E8E6E1; --muted:#9AA5AE; --accent:#F08A7E; --rule:#2A333B; --card:#1A2128; }
 }
 :root[data-theme="dark"] { --bg:#12171C; --ink:#E8E6E1; --muted:#9AA5AE; --accent:#F08A7E; --rule:#2A333B; --card:#1A2128; }
+/* while a clip plays the whole page goes red, so the people around you can tell */
+html.playing:root { --bg:#C8102E; --card:#A50D25; --ink:#FFFFFF; --muted:#FFD9DE; --accent:#FFFFFF; --rule:#E8566B; }
+body, .who, .stop { transition:background-color .3s; }
 * { box-sizing:border-box; }
 body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.6 Georgia, "Iowan Old Style", serif; }
 main { max-width:40rem; margin:0 auto; padding:16px; }
@@ -107,6 +110,14 @@ details p { margin:.7rem 0; }
   document.addEventListener('play', function (e) {
     document.querySelectorAll('audio').forEach(function (a) { if (a !== e.target) a.pause(); });
   }, true);
+  // red page (and red phone status bar) while anything is playing
+  var tint = document.querySelector('meta[name="theme-color"]'), plain = tint.content;
+  function playing() {
+    var on = Array.from(document.querySelectorAll('audio')).some(function (a) { return !a.paused && !a.ended; });
+    document.documentElement.classList.toggle('playing', on);
+    tint.content = on ? '#C8102E' : plain;
+  }
+  ['play', 'playing', 'pause', 'ended', 'emptied'].forEach(function (ev) { document.addEventListener(ev, playing, true); });
 })();
 </script>
 </body>
