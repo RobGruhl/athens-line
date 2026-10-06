@@ -16,14 +16,28 @@ def load(narr_set):
         stops.extend(json.load(open(f)))
     mf = DOCS / "audio" / narr_set / "manifest.json"
     clips = json.load(open(mf))["clips"] if mf.exists() else {}
+    hop = {h["n"]: h["items"] for h in json.load(open(ROOT / "narration" / "hop-off.json"))}
     for s in sorted(stops, key=lambda s: s["n"]):
         s["audio"] = clips.get(s["slug"], {})
+        s["hop"] = hop.get(s["n"], [])
     return sorted(stops, key=lambda s: s["n"])
 
 
 def strip_tags(text):
     """Audio tags like [pause] are for the voice, not the page."""
     return re.sub(r"\s*\[[^\]]+\]\s*", " ", text).replace("  ", " ").strip()
+
+
+def hop_html(items):
+    """The text-only addendum: what's worth getting off for, with rough times. Shared by both tracks."""
+    if not items:
+        return ""
+    li = ""
+    for it in items:
+        t = f'<span class="t">{html.escape(it["time"])}</span>' if it.get("time") else ""
+        c = f'<span class="closed">{html.escape(it["closed"])}</span>' if it.get("closed") else ""
+        li += f'<li><b>{html.escape(it["what"])}</b>{t}<br>{html.escape(it["note"])}{c}</li>'
+    return f'<div class="hop"><h3>Worth hopping off for</h3><ul>{li}</ul></div>'
 
 
 def stop_html(s):
@@ -39,7 +53,7 @@ def stop_html(s):
                         f'<audio controls preload="none" src="{a["file"]}?v={v}"></audio></div>')
     where = f'<p class="where">{html.escape(s["where"])}</p>' if s.get("where") else ""
     return (f'<section class="stop" id="{s["slug"]}"><h2><span class="n">{s["n"]}</span>{html.escape(s["title"])}</h2>'
-            f'{where}{players}<details><summary>Read the long version</summary>{paras(s["long"])}</details>'
+            f'{where}{players}{hop_html(s["hop"])}<details><summary>Read the long version</summary>{paras(s["long"])}</details>'
             f'<details><summary>Read the short version</summary>{paras(s["short"])}</details></section>')
 
 

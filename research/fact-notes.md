@@ -39,3 +39,11 @@
   - Kallirrhoe and the bridal baths (Thucydides);
   - the 2018 bailout exit;
   - frogs and tortoises at Kerameikos.
+
+## Hop-off lists (`narration/hop-off.json`, 2026-10-06)
+- Times are rough visit lengths, not opening hours.
+- Day closures were checked by WebSearch against museum and guide pages on 2026-10-06:
+  - closed Tuesdays: Benaki (Koumbari), Cycladic, National Gallery, Numismatic, and the Byzantine (except 15 Jun to 31 Aug);
+  - NAM opens at 13:00 on Tuesdays in summer hours;
+  - the War Museum is closed Mondays.
+- Other checks: the Acropolis uses timed entry; stadium tickets are sold at the gate only and include a 30-minute audio guide; the Vallianeio is open on weekdays as a reading room.
