@@ -156,19 +156,32 @@
     "what": "The Benaki Museum",
     "time": "1½–2 hr",
     "note": "Greek life and art from prehistory to the 20th century in the family mansion, with a café on the roof.",
-    "closed": "Closed Tuesdays, rooftop café too."
+    "closed": "Closed Tuesdays, rooftop café too.",
+    "closed_days": [
+     "Tue"
+    ]
    },
    {
     "what": "The Museum of Cycladic Art",
     "time": "1–1½ hr",
     "note": "The marble figurines that look modern and are about five thousand years old.",
-    "closed": "Closed Tuesdays."
+    "closed": "Closed Tuesdays.",
+    "closed_days": [
+     "Tue"
+    ]
    },
    {
     "what": "The Byzantine & Christian Museum",
     "time": "1½–2 hr",
     "note": "Icons, mosaics and frescoes, with quiet gardens.",
-    "closed": "Closed Tuesdays, except mid-June to August, when Tuesday hours are 13:00–20:00."
+    "closed": "Closed Tuesdays, except mid-June to August, when Tuesday hours are 13:00–20:00.",
+    "closed_days": [
+     "Tue"
+    ],
+    "open_anyway": [
+     "06-15",
+     "08-31"
+    ]
    },
    {
     "what": "Kolonaki and Lycabettus",
@@ -178,7 +191,10 @@
    {
     "what": "On a Tuesday",
     "time": "",
-    "note": "Three of the four museums here are closed on Tuesdays; the War Museum next stop is open. Kolonaki and Lycabettus are the better plan."
+    "note": "Three of the four museums here are closed on Tuesdays; the War Museum next stop is open. Kolonaki and Lycabettus are the better plan.",
+    "only_days": [
+     "Tue"
+    ]
    }
   ]
  },
@@ -189,13 +205,19 @@
     "what": "The National Gallery",
     "time": "1½–2 hr",
     "note": "Greek painting from the 19th and 20th centuries, plus a few El Grecos. It reopened in 2021 after a long rebuild.",
-    "closed": "Closed Tuesdays. Open late on Wednesdays."
+    "closed": "Closed Tuesdays. Open late on Wednesdays.",
+    "closed_days": [
+     "Tue"
+    ]
    },
    {
     "what": "The War Museum",
     "time": "45–60 min",
     "note": "Inside is the story of Greece's wars. The aircraft parked outside are free to look at.",
-    "closed": "Closed Mondays."
+    "closed": "Closed Mondays.",
+    "closed_days": [
+     "Mon"
+    ]
    },
    {
     "what": "Aristotle's Lyceum",
@@ -246,7 +268,10 @@
     "what": "The Numismatic Museum",
     "time": "45–60 min",
     "note": "In Schliemann's own mansion, Iliou Melathron, about ten minutes toward Syntagma. Come for the painted rooms and the quiet garden café.",
-    "closed": "Closed Tuesdays, and shuts at 15:30 on other days."
+    "closed": "Closed Tuesdays, and shuts at 15:30 on other days.",
+    "closed_days": [
+     "Tue"
+    ]
    }
   ]
  },
@@ -348,7 +373,10 @@
     "what": "The Central Market",
     "time": "30–45 min",
     "note": "Meat and fish halls on one side of Athinas, fruit and veg on the other. It's liveliest in the morning.",
-    "closed": "Closed Sundays."
+    "closed": "Closed Sundays.",
+    "closed_days": [
+     "Sun"
+    ]
    },
    {
     "what": "Lunch at Diporto or Epirus",

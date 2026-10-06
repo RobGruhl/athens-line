@@ -47,7 +47,7 @@ details p { margin:.7rem 0; }
 <main>
 <header>
   <h1>Athens, from the top deck</h1>
-  <p>A companion for the red Athens Line hop-on hop-off bus (stops A1 to A15, from Syntagma). Short clips for when the bus rolls on, long ones for when you hop off or sit in traffic. Each stop lists what's worth getting off for, with rough times; hours change, so check before you go.</p>
+  <p>A companion for the red Athens Line hop-on hop-off bus (stops A1 to A15, from Syntagma). Short clips for when the bus rolls on, long ones for when you hop off or sit in traffic. Each stop lists what's worth getting off for, with rough times. Places closed today are left off; hours change, so check before you go.</p>
 </header>
 <nav class="who"><button data-set="rob">Rob</button><button data-set="jamie">Jamie</button></nav>
 <div class="save"><button id="save">Save this track for offline</button>
@@ -91,6 +91,18 @@ details p { margin:.7rem 0; }
       btn.disabled = false;
     };
   } else { btn.hidden = true; info.textContent = 'This browser cannot save for offline; stream with signal.'; }
+  // hide hop-off items on the days they're closed (and day-specific tips on other days), by the date in Athens
+  function today() {
+    var p = new Intl.DateTimeFormat('en-US', {timeZone: 'Europe/Athens', weekday: 'short', month: '2-digit', day: '2-digit'}).formatToParts(new Date());
+    var g = function (k) { return p.find(function (x) { return x.type === k; }).value; };
+    var day = g('weekday'), md = g('month') + '-' + g('day');
+    document.querySelectorAll('.hop li').forEach(function (li) {
+      var c = li.dataset.closed, o = li.dataset.only, s = li.dataset.season && li.dataset.season.split(',');
+      li.hidden = (c && c.split(' ').indexOf(day) >= 0 && !(s && md >= s[0] && md <= s[1])) || (o && o.split(' ').indexOf(day) < 0) || false;
+    });
+  }
+  today();
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) today(); });
   // one clip at a time
   document.addEventListener('play', function (e) {
     document.querySelectorAll('audio').forEach(function (a) { if (a !== e.target) a.pause(); });

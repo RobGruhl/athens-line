@@ -46,4 +46,5 @@
   - closed Tuesdays: Benaki (Koumbari), Cycladic, National Gallery, Numismatic, and the Byzantine (except 15 Jun to 31 Aug);
   - NAM opens at 13:00 on Tuesdays in summer hours;
   - the War Museum is closed Mondays.
+- The page hides an item on its closed days (`closed_days`, by the date in Athens). `only_days` shows a tip only on those days.
 - Other checks: the Acropolis uses timed entry; stadium tickets are sold at the gate only and include a 30-minute audio guide; the Vallianeio is open on weekdays as a reading room.

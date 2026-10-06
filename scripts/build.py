@@ -36,7 +36,11 @@ def hop_html(items):
     for it in items:
         t = f'<span class="t">{html.escape(it["time"])}</span>' if it.get("time") else ""
         c = f'<span class="closed">{html.escape(it["closed"])}</span>' if it.get("closed") else ""
-        li += f'<li><b>{html.escape(it["what"])}</b>{t}<br>{html.escape(it["note"])}{c}</li>'
+        # closed_days / only_days hide the item in the browser on those days (Athens time); see page.html
+        data = "".join(f' data-{k.split("_")[0]}="{" ".join(it[k])}"' for k in ("closed_days", "only_days") if it.get(k))
+        if it.get("open_anyway"):
+            data += f' data-season="{",".join(it["open_anyway"])}"'
+        li += f'<li{data}><b>{html.escape(it["what"])}</b>{t}<br>{html.escape(it["note"])}{c}</li>'
     return f'<div class="hop"><h3>Worth hopping off for</h3><ul>{li}</ul></div>'
 
 
